@@ -17,6 +17,10 @@
 
   <project path="system/libion_header_paths" name="IPSBHANGU/system_libion_header_paths" remote="github" />
 
+  <!-- External -->
+  <remove-project name="platform/external/fastrpc" />
+  <project path="external/fastrpc" name="AOSPA/android_external_fastrpc" remote="github" />
+
   <!-- Tools (AOSPA) -->
   <project path="tools/extract-utils" name="AOSPA/android_tools_extract-utils" remote="github" />
 
