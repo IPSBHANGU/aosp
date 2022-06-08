@@ -1,12 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote  name="aosp"
+  <!-- AOSP -->
+  <remote name="aosp"
+          fetch="https://android.googlesource.com"
+          review="https://android-review.googlesource.com/"
+          revision="refs/tags/android-12.1.0_r5"/>
+
+  <!-- CAF -->
+  <remote name="caf_system"
+          fetch="https://git.codelinaro.org/clo/la"
+          review="codelinaro.org"/>
+
+  <default revision="refs/tags/LA.QSSI.12.0.r1-07600-qssi.0"
+           remote="caf_system"/>
+
+ <remote name="caf_vendor"
+          fetch="https://git.codelinaro.org/clo/la"
+          review="codelinaro.org"
+          revision="refs/tags/LA.UM.9.14.r1-19600.01-LAHAINA.QSSI12.0"/>
+
+  <!-- AOSPA -->
+  <remote  name="aospa"
            fetch=".."
-           review="https://android-review.googlesource.com/" />
-  <default revision="refs/tags/android-12.1.0_r5"
-           remote="aosp"
-           sync-j="4" />
+           review="gerrit.aospa.co"
+           revision="sapphire"/>
+
+  <remote  name="bitbucket"
+           fetch="https://bitbucket.org"
+           revision="sapphire" />
+
+  <remote  name="blobs"
+           fetch="https://github.com/ThankYouMario"
+           revision="sapphire" />
+
+  <remote  name="blobs-gitlab"
+           fetch="https://gitlab.com/ThankYouMario"
+           revision="sapphire" />
+
+  <remote  name="github"
+           fetch="https://github.com"
+           revision="sapphire" />
+
+  <remote  name="github-ssh"
+           fetch="ssh://git@github.com" />
+
+  <remote  name="gitlab"
+           fetch="https://gitlab.com" />
 
   <superproject name="platform/superproject" remote="aosp" revision="android-12.1.0_r5" />
   <contactinfo bugurl="go/repo-bug" />
@@ -730,15 +770,10 @@
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />
   <project path="hardware/nxp/nfc" name="platform/hardware/nxp/nfc" groups="pdk" />
   <project path="hardware/nxp/secure_element" name="platform/hardware/nxp/secure_element" groups="pdk" />
-  <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom,qcom_audio,pdk-qcom" />
-  <project path="hardware/qcom/bootctrl" name="platform/hardware/qcom/bootctrl" groups="pdk-qcom" />
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom,pdk-qcom" />
   <project path="hardware/qcom/camera" name="platform/hardware/qcom/camera" groups="qcom_camera,pdk-qcom" />
   <project path="hardware/qcom/data/ipacfg-mgr" name="platform/hardware/qcom/data/ipacfg-mgr" groups="qcom,pdk-qcom" />
-  <project path="hardware/qcom/display" name="platform/hardware/qcom/display" groups="pdk-qcom,qcom,qcom_display" />
-  <project path="hardware/qcom/gps" name="platform/hardware/qcom/gps" groups="qcom,qcom_gps,pdk-qcom" />
   <project path="hardware/qcom/keymaster" name="platform/hardware/qcom/keymaster" groups="qcom,qcom_keymaster,pdk-qcom" />
-  <project path="hardware/qcom/media" name="platform/hardware/qcom/media" groups="qcom,pdk-qcom" />
   <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" groups="qcom_msm8960,pdk-qcom" />
   <project path="hardware/qcom/msm8994" name="platform/hardware/qcom/msm8994" groups="qcom_msm8994,pdk-qcom" />
   <project path="hardware/qcom/msm8996" name="platform/hardware/qcom/msm8996" groups="qcom_msm8996,pdk-qcom" />
@@ -780,7 +815,6 @@
     <linkfile src="os_pickup.mk" dest="hardware/qcom/sm8150p/Android.mk" />
     <linkfile src="os_pickup.bp" dest="hardware/qcom/sm8150p/Android.bp" />
   </project>
-  <project path="hardware/qcom/wlan" name="platform/hardware/qcom/wlan" groups="qcom_wlan,pdk-qcom" />
   <project path="hardware/ril" name="platform/hardware/ril" groups="pdk" />
   <project path="hardware/samsung/nfc" name="platform/hardware/samsung/nfc" groups="pdk" />
   <project path="hardware/st/nfc" name="platform/hardware/st/nfc" groups="pdk" />
@@ -1103,5 +1137,5 @@
   <project path="tools/trebuchet" name="platform/tools/trebuchet" groups="tools,cts,pdk,pdk-cw-fs,pdk-fs" />
 
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
-
+  <include name="caf.xml"/>
 </manifest>

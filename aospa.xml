@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Device -->
+  <remove-project name="device/qcom/common" />
+  <project path="device/qcom/common" name="AOSPA/android_device_qcom_common" remote="github" >
+    <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
+  </project>
+  <remove-project name="device/qcom/sepolicy_vndr" />
+  <project path="device/qcom/sepolicy_vndr" name="AOSPA/android_device_qcom_sepolicy_vndr" remote="github" />
+  <remove-project name="device/qcom/vendor-common" />
+  <project path="device/qcom/vendor-common" name="AOSPA/android_device_qcom_vendor-common" remote="github" />
+  <remove-project name="kernel/build" />
+  <project path="device/qcom/kernelscripts" name="AOSPA/android_kernel_build" remote="github" >
+    <linkfile dest="build/make/core/tasks/kernel_definitions.mk" src="kernel_definitions.mk"/>
+  </project>
+
+  <!-- Tools (AOSPA) -->
+  <project path="tools/extract-utils" name="AOSPA/android_tools_extract-utils" remote="github" />
+
+  <!-- Vendor (AOSPA) -->
+  <project path="vendor/google/gms" name="android_vendor_google_gms" remote="blobs-gitlab" />
+  <project path="vendor/google/pixel" name="android_vendor_google_pixel" remote="blobs" />
+  <project path="vendor/qcom/common" name="proprietary_vendor_qcom_common" remote="blobs" />
+
+  <!-- Vendor (NXP) -->
+  <remove-project name="platform/vendor/nxp/opensource/halimpl" />
+  <project path="vendor/nxp/opensource/halimpl" name="AOSPA/android_vendor_nxp_opensource_halimpl" remote="github" />
+
+  <!-- Vendor (QCOM) -->
+  <remove-project name="platform/vendor/codeaurora/telephony" />
+  <project path="vendor/codeaurora/commonsys/telephony" name="AOSPA/android_vendor_codeaurora_commonsys_telephony" remote="github" />
+  <remove-project name="platform/vendor/qcom-opensource/bluetooth-commonsys-intf" />
+  <project path="vendor/qcom/opensource/commonsys-intf/bluetooth" name="AOSPA/android_vendor_qcom-opensource_bluetooth-commonsys-intf" remote="github" />
+  <remove-project name="platform/vendor/qcom-opensource/data-ipa-cfg-mgr" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="AOSPA/android_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="github" />
+  <remove-project name="platform/vendor/qcom-opensource/display-commonsys-intf" />
+  <project path="vendor/qcom/opensource/commonsys-intf/display" name="AOSPA/android_vendor_qcom_opensource_commonsys-intf_display" remote="github" >
+    <linkfile dest="vendor/qcom/defs/product-defs/system/display-product-system.mk" src="config/display-product-system.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/display-interfaces-product.mk" src="config/display-interfaces-product.mk" />
+  </project>
+  <project path="vendor/qcom/opensource/commonsys-intf/wfd" name="AOSPA/android_vendor_qcom_opensource_commonsys-intf_wfd" remote="github" />
+  <remove-project name="platform/vendor/qcom-opensource/power" />
+  <project path="vendor/qcom/opensource/power" name="AOSPA/android_vendor_qcom-opensource_power" remote="github" />
+  <remove-project name="platform/vendor/qcom-opensource/vibrator" />
+  <project path="vendor/qcom/opensource/vibrator" name="AOSPA/android_vendor_qcom-opensource_vibrator" remote="github" />
+
+</manifest>
