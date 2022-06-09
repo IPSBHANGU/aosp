@@ -54,7 +54,6 @@
   <remove-project name="device/google/sunfish-sepolicy"/>
   <remove-project name="device/google/trout"/>
   <remove-project name="device/google/vrservices"/>
-  <remove-project name="device/sample"/>
 
   <!-- Hardware (NXP) -->
   <remove-project name="platform/hardware/nxp/nfc" />
