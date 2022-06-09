@@ -4,7 +4,7 @@
   <!-- Device -->
   <remove-project name="device/qcom/common" />
   <project path="device/qcom/common" name="AOSPA/android_device_qcom_common" remote="github" >
-    <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
+    <linkfile dest="build/make/core/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
   </project>
   <remove-project name="device/qcom/sepolicy_vndr" />
   <project path="device/qcom/sepolicy_vndr" name="AOSPA/android_device_qcom_sepolicy_vndr" remote="github" />
