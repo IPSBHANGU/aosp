@@ -30,6 +30,8 @@
   <project path="vendor/nxp/opensource/halimpl" name="AOSPA/android_vendor_nxp_opensource_halimpl" remote="github" />
 
   <!-- Vendor (QCOM) -->
+  <remove-project name="platform/vendor/qcom-opensource/interfaces" />
+  <project path="vendor/qcom/opensource/interfaces" name="IPSBHANGU/vendor_qcom_opensource_interfaces" remote="github" />
   <remove-project name="platform/vendor/codeaurora/telephony" />
   <project path="vendor/codeaurora/commonsys/telephony" name="AOSPA/android_vendor_codeaurora_commonsys_telephony" remote="github" />
   <remove-project name="platform/vendor/qcom-opensource/bluetooth-commonsys-intf" />
