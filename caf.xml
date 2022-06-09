@@ -47,6 +47,7 @@
   <project name="device/qcom/sepolicy" remote="caf_system"/>
   <project name="device/qcom/sepolicy_vndr" remote="caf_vendor"/>
   <project name="device/qcom/vendor-common" remote="caf_vendor"/>
+  <project name="device/qcom/qssi" remote="caf_system"/>
   <project name="kernel/build" path="device/qcom/kernelscripts" remote="caf_vendor"/>
   <project groups="cyborg" name="kernel/msm-5.4" remote="caf_vendor"/>
   <project name="platform/hardware/qcom/audio" path="vendor/qcom/opensource/audio-hal/primary-hal" remote="caf_vendor"/>
