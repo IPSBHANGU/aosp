@@ -44,6 +44,7 @@
   <project name="device/qcom/common" remote="caf_vendor">
     <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
   </project>
+  <project name="device/qcom/sepolicy" remote="caf_system"/>
   <project name="device/qcom/sepolicy_vndr" remote="caf_vendor"/>
   <project name="device/qcom/vendor-common" remote="caf_vendor"/>
   <project name="kernel/build" path="device/qcom/kernelscripts" remote="caf_vendor"/>
