@@ -15,6 +15,7 @@
     <linkfile dest="build/make/core/tasks/kernel_definitions.mk" src="kernel_definitions.mk"/>
   </project>
 
+  <project path="system/fwk-detect" name="IPSBHANGU/system_fwk-detect" remote="github" />
   <project path="system/libion_header_paths" name="IPSBHANGU/system_libion_header_paths" remote="github" />
 
   <!-- External -->
